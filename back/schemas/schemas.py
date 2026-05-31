@@ -62,7 +62,7 @@ class ActivityCreate(BaseModel):
     cost: float = 0.0
     order: int = 0
 
-class ActivityUpdate(ActivityCreate):
+class ActivityOut(ActivityCreate):
     model_config = ConfigDict(from_attributes=True)
     id: str
     day_id: str
@@ -78,7 +78,7 @@ class TripDayOut(BaseModel):
     day_number: int
     date: Optional[datetime] = None
     notes: Optional[str] = None
-    activities: List[ActivityUpdate] = []
+    activities: List[ActivityOut] = []
 
     model_config = ConfigDict(from_attributes=True)
 
