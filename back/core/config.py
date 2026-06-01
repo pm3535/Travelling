@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
  
-    DATABASE_URL: str
+    DATABASE_URL: str = "postgresql+asyncpg://postgres:14801480@localhost:5432/travel"
     REDIS_URL: str = "redis://localhost:6379/0"
  
     OPENAI_API_KEY: str
